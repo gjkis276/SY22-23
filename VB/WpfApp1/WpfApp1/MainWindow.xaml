@@ -7,8 +7,44 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="384,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="427,139,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Command="ApplicationCommands.New"/>
+                <MenuItem Command="ApplicationCommands.Open"/>
+                <MenuItem Command="ApplicationCommands.Save"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                 <MenuItem Command="ApplicationCommands.Undo"/>
+                <MenuItem Command="ApplicationCommands.Copy"/>
+                <MenuItem Command="ApplicationCommands.Cut"/>
+                <MenuItem Command="ApplicationCommands.Paste"/>
+            </MenuItem> 
+            
+            
+            <MenuItem Header="Format">
+                
+               
+                
+            </MenuItem>
+            <MenuItem Header="_view">
+                
+            </MenuItem>
+            <MenuItem Header="_Font">
+                <MenuItem Header="_Bold" IsCheckable="True"
+              Checked="Bold_Checked"
+              Unchecked="Bold_Unchecked"/>
+                <MenuItem Header="_Italic" IsCheckable="True"
+              Checked="Italic_Checked"
+              Unchecked="Italic_Unchecked"/>
+                <Separator/>
+                <MenuItem Header="I_ncrease Font Size"
+              Click="IncreaseFont_Click"/>
+                <MenuItem Header="_Decrease Font Size"
+              Click="DecreaseFont_Click"/>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="textBox1" TextWrapping="Wrap"
+         Margin="2,33,2,2" Text="hi my name is gage an i want to go home."/>
     </Grid>
+    
 </Window>
